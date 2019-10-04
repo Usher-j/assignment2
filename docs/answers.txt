@@ -77,3 +77,11 @@ to the central repository. This would greatly reduce productivity in a team of 1
 overseen by "lieutenant". The dictator repository is where the changes to the lieutenant repositories
 are merged and conflict arises are solved. The central repository can only be pushed to by the "dicator".
 
+Is the Driving simulator prototype using polymorphism and/or encapsulation? If you find that
+the prototype is using any of these two OOP principles, please discuss in which way the
+prototype is using it.
+
+The Driving simulator prototype uses encapsulation becauses every class has its own data and method contained
+within itself. Each class also has private information that can only be accessed within the class. 
+The prototype also uses polymorphism, which can be seen in main.cpp with how vehiclesarray is declared and used
+with all the types of vehicles.
