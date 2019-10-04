@@ -14,9 +14,12 @@ private:
 public:
     Boat();
 
-    explicit Boat(string brand, string model, string fuelType);
+    explicit Boat(string brand, string model, string fuelType, int numberOfEngines = 1);
 	
     virtual ~Boat();
+	
+	int getNumberOfEngines();
+    void setNumberOfEngines(int engines);
 
     virtual double mileageEstimate(double time);
     virtual string toString();
