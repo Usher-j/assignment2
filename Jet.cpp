@@ -4,11 +4,12 @@
 
 #include "Jet.h"
 #include <cstdlib>
+#include <math.h>
 
 Jet::Jet() {
     setBrand("Custom");
     setModel("Custom");
-	numberOfEngines = 1;
+	setNumberOfEngines(1);
 }
 
 Jet::Jet(string brand, string model, string fuelType, int numberOfEngines) {
@@ -32,7 +33,7 @@ int Jet::getNumberOfEngines() {
 
 // Mileage Calculation
 double Jet::mileageEstimate(double time) {
-    double mileage = ((rand()%100)+1) * time;
+    double mileage = floor(((rand()%100)+1)) * time;
     if (fuelType == "Rocket" && numberOfEngines >= 2) {
         mileage = mileage*(1+((5.5*numberOfEngines)/100));
     }
@@ -42,5 +43,5 @@ double Jet::mileageEstimate(double time) {
 // Modified toString For Jet
 string Jet::toString() {
     return "-> Jet\n" + PoweredVehicle::toString() + "\n\tNumber Of Engines: " +
-           getNumberOfEngines();
+           to_string(getNumberOfEngines());
 }

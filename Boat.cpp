@@ -4,11 +4,12 @@
 
 #include "Boat.h"
 #include <cstdlib>
+#include <math.h>
 
 Boat::Boat() {
     setBrand("Custom");
     setModel("Custom");
-	numberOfEngines = 1;
+	setNumberOfEngines(1);
 }
 
 Boat::Boat(string brand, string model, string fuelType, int numberOfEngines) {
@@ -30,7 +31,7 @@ int Boat::getNumberOfEngines() {
 
 double Boat::mileageEstimate(double time) {
 	
-    double mileage = ((rand()%100)+1) * time;
+    double mileage = floor((rand()%100)+1) * time;
 	
 	// Get 2% more mileage for each engine if Diesel
     if (fuelType == "Diesel") 
