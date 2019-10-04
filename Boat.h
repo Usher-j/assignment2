@@ -10,7 +10,6 @@
 class Boat : public PoweredVehicle {
 
 private:
-	int numberOfEngines;
 
 public:
     Boat();

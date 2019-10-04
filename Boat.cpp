@@ -30,7 +30,7 @@ int Boat::getNumberOfEngines() {
 
 double Boat::mileageEstimate(double time) {
 	
-    double mileage = floor((rand()%100)+1) * time;
+    double mileage = ((rand()%100)+1) * time;
 	
 	// Get 2% more mileage for each engine if Diesel
     if (fuelType == "Diesel") 
