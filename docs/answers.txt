@@ -1,0 +1,79 @@
+(a) Paste the console output you saved at the end of step 3.C (2 points)
+
+Jared@ExpensivePotato MINGW64 ~/Documents/Github/assignment2 (master)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 931 bytes | 931.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/Usher-j/assignment2.git
+   f4975e5..0e25076  master -> master
+
+(b) How many commits have been done to the repository (not only by you, but by
+anyone) so far? Write the git command you used to get this information (4 points)
+
+So far a total of 9 commits have been done to the repository. To get this information
+I used the command: git rev-list --all --count
+
+(c) When was the .gitignore file modified last? Write the git command you used to get
+this information (4 points)
+
+The last time the .gitignore file was modified was Wed Sep. 25 18:13:30 2019. To ge this
+information I used the command: git log -1 .gitignore
+
+(d) Mention two reasons why branches are used in a Git repository (4 points)
+
+Two reasons why branches are used in a Git repository are:
+1) Make sure your code changes are verified before delivering them to other developers.
+2) Support quality assurance/code quality/integration/testing processes.
+
+(e) What is the difference between git log and git status? (4 points)
+
+git log gets infromation about the last commits.
+git status shows the working tree status.
+
+(f) What command would you use to see the commits where “Vehicle.h” was one of the
+committed files? (4 points)
+
+To get this information I used the command: git log Vehicle.h
+
+(g) What command would you use to see the commits whose commit message contains the
+word “file”? (4 points)
+
+To get this information I used the command: git log --grep=file
+
+(h) In the context of object-oriented programming (I) What is inheritance? (II) What is
+polymorphism? (III) What is encapsulation? (6 points)
+
+(I) Inheritance allows for a class to be based on another class. This allows 
+	for a hierarchy of classes that share a set of attributes and methods.
+
+(II) Polymorphism is the ability to process objects differently depending on their data 
+	 type or class. 
+
+(III) Encapsulation describes combining data and methods that work within a class together.
+
+(i) What is the main difference between the “Dictator and Lieutenants” workflow and the
+“Integration manager” workflow? (5 points)
+
+The "Dictator and Lietenants" workflow is based around distributive development and integration.
+It features one central repository that only the "dictator" can push to. The Dictator repository
+merges changes in the lower repositories and solves any conflicts. The lower repositories are where
+developers changes are merged and pushed to. In the "Integration manager" workflow every developers
+makes push to their own public repository and pulls from a central repository. Conflicts are resolved
+by the integration manager. Each developer pulls and pushes to their own public repository.
+
+(j) How would a team of 100 developers benefit from following the “Dictator and
+Lieutenants” workflow instead of the “Centralized” workflow? (5 points)
+
+A team of developers would benefit greatly from the use of "Dictator and Lietenants" workflow instead
+of the "Centralized” workflow. In a "Centralized” workflow there is only a central repository where
+every developer has to pull any changes in the central repository and resolve conflicts before pushing
+to the central repository. This would greatly reduce productivity in a team of 100 developers. 
+"Dictator and Lietenants" workflow would be far better because developers could be split into subgroups
+overseen by "lieutenant". The dictator repository is where the changes to the lieutenant repositories
+are merged and conflict arises are solved. The central repository can only be pushed to by the "dicator".
+
